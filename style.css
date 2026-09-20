@@ -730,6 +730,56 @@ h1, h2, h3 { font-family: var(--font-display); color: var(--ink); line-height: 1
 .work-card h3 { font-size: 1.05rem; margin-bottom: .55rem; }
 .work-card p { font-size: .9rem; color: var(--body); }
 
+/* --- Projects --- */
+.projects-list { display: grid; gap: 1.4rem; }
+
+.project-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 1.9rem 2rem;
+  box-shadow: var(--shadow-sm);
+  transition: transform .3s var(--ease), box-shadow .3s ease, border-color .3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow);
+  border-color: rgba(79, 70, 229, 0.35);
+}
+
+.project-card .tl-top { flex-wrap: wrap; }
+.project-card .tl-meta h3 { font-size: 1.25rem; }
+
+.project-card > p { font-size: .96rem; color: var(--body); margin-top: .15rem; }
+
+.project-points {
+  list-style: none;
+  display: grid;
+  gap: .5rem;
+  margin-top: 1.1rem;
+}
+
+.project-points li {
+  font-size: .92rem;
+  color: var(--body);
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.project-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--brand), var(--brand-2));
+}
+
+.project-card .tl-chips { margin-top: 1.2rem; }
+
 /* --- Testimonial --- */
 .testimonial {
   position: relative;
